@@ -5,9 +5,18 @@ body {
   font-family: sans-serif;
   background: #e5e5e5;
 }
-/* textarea{
-  resize: none;
-} */
+input:active,
+input:focus {
+  outline: none !important;
+}
+button:active,
+button:focus {
+  outline: none !important;
+}
+textarea:active,
+textarea:focus {
+  outline: none !important;
+}
 .header {
   background: #fa8c16;
   padding-top: 16px;
@@ -121,16 +130,21 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  word-break:break-all;
+  white-space: pre-wrap;
 }
 .post-text {
   color: #262626;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
+  word-break:break-all;
+  white-space: pre-wrap;
 }
 .tags {
   margin-bottom: 22px;
   color: #bfbfbf;
+  word-break:break-all;
 }
 .tag {
   color: #bfbfbf;
@@ -475,6 +489,7 @@ body {
 }
 .add-post.visible {
   display: flex;
+  width: 67%;
 }
 .add-title,
 .add-text,
@@ -542,6 +557,9 @@ body {
     transform: translateX(0);
   }
   .posts {
+    width: 100%;
+  }
+  .add-post.visible{
     width: 100%;
   }
   .header-nav {
